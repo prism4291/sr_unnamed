@@ -1,0 +1,85 @@
+Boxer:
+-STR: +1/2 min AT, +1 max AT
+-DEX: +1/4 combo count
+-MAG: for MP weapons
+-AGI rework:
+Boxer has a new 'combo' stat, which starts at 1
+and can be increased with DEX. The boxer will
+attack using its weapons min AGI for the amount
+if times the combo stat is, and wait for the duration 
+of the weapon's max AGI to start a new combo.
+Each consecutive hit in a combo deals 10% more damage.
+
+Gladiator:
+-STR: +1/2 min and max AT
+-DEX: +2% greatslash chance
+-MAG: for MP weapons
+-Greatslash:
+A big splash-damage sweep that scales with AT, 
+including compos like criticals card. Size scales
+with sword range, and some other things may change
+its properties.
+
+Sniper:
+-Vanilla, for now
+
+Magician:
+-Vanilla, for now
+
+Priest:
+-STR: +1% AT aura
+-DEX: +0.2s aura duration
+-MAG: +1/4 MP aura
+-Aura rework:
+Priest's aura now activates for a duration upon 
+attacking, however the aura has infinite range.
+MP aura gives extra MP from attacking for 
+classes with MP weapons.
+
+Gunner:
+-Vanilla, for now
+
+Whipper:
+-STR: +1/2 max AT, +1% starstrike chance
+-DEX: +1/5 bullet count
+-MAG: for MP weapons
+-Attempt at increased accuracy (also implemented whip range)
+-Starstrike:
+Spawns short-lived stationary projectiles 
+in a star shape, scales with AT. 
+Initially 3 projectiles, increases
+with bullet count stat.
+
+Angel:
+-STR: +1/4 min AT, +1/3 max AT, +1/10 echoes
+-DEX: +1 extra ring at 10, 30, 60 and 100 DEX
+-MAG: for MP weapons
+-Echoes:
+When hitting an enemy, spawns an echo projectile
+that ricochets and scales with AT. Chance to
+bounce off of enemies again.
+
+Summoner:
+-STR: +1/2 min AT, +1/2 max AT
+-DEX: +1/20 summon slots (You start with 2, max summons is 7)
+-MAG: for MP weapons
+-IMPORTANT How to summoner:
+1. Go to the town
+2. Have your summoner selected
+3. There will be a summoning interface,
+   which allows you to mix and match different summons
+4. BIG NOTE: Summons' stats and compo items will only update when you summon them,
+   so make sure to resummon them after SP-investments or compo additions
+5. An exception to the previous point is a priest's aura
+6. Defensive compos will also only work if you have
+   summons with them equipped.
+
+Reaper:
+-STR: +1/2 min AT, +1 max AT
+-DEX: +1% wraith soul chance (caps at 80%), 
+	increased tier at 20, 40, 60 and 80
+-MAG: for MP weapons
+-Wraith soul:
+Upon hitting an enemy, spawns a homing spectral projectile
+that deals heavy damage (10*STR). Higher tiers come with many fun
+improvements.
