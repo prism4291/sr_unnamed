@@ -9882,19 +9882,19 @@ function ci(a) {
 vh.ontouchstart = function(a) {
 	ci(a);
 	bi = Qh = Nh = !1;
-	if (!(0 > Rh || ea <= Rh || 0 > Sh || fa <= Sh)) return Nh = bi = !0, 1 < a.touches.length && (Qh = !0), !1;
-        return !1;
+	if (!(0 > Rh || ea <= Rh || 0 > Sh || fa <= Sh)) Nh = bi = !0, 1 < a.touches.length && (Qh = !0), !1;
+    return !1;
 };
 vh.ontouchmove = function(a) {
 	ci(a);
-	if (bi) return !1;
-        return !1;
+	
+    return !1;
 };
 vh.ontouchend = function(a) {
 	1 > a.touches.length && (Nh = !1);
 	Qh = !1;
-	if (bi) return !1;
-        return !1;
+	
+    return !1;
 };
 vh.ontouchcancel = function() {
 	Qh = Nh = bi = !1
