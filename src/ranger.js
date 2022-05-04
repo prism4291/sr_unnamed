@@ -6667,7 +6667,7 @@ doc.onmousemove = getMousePos;
 doc.onmousedown = function(a) {
     getMousePos(a);
     Mouse_In_Window2 = !1;
-    if (!(0 > Mouse_Xpos2 || 512 <= Mouse_Xpos2 || 0 > Mouse_Ypos2 || 384 <= Mouse_Ypos2) && (Mouse_In_Window2 = !0, 0 == a.button && (Left_Click_Is_Down = !0), 2 == a.button && (Right_Click_Is_Down = !0), Mouse_In_Window2)) return !1
+    if (!(0 > Mouse_Xpos2 || 512 <= Mouse_Xpos2 || 0 > Mouse_Ypos2 || 384 <= Mouse_Ypos2) && (Mouse_In_Window2 = !0, 0 == a.button && (Left_Click_Is_Down = !0), 2 == a.button && (Right_Click_Is_Down = !0), Mouse_In_Window2)) return !0
 };
 doc.onmouseup = function(a) {
     getMousePos(a);
@@ -6675,7 +6675,7 @@ doc.onmouseup = function(a) {
     2 == a.button && (Right_Click_Is_Down = !1)
 };
 doc.oncontextmenu = function() {
-    if (Mouse_In_Window2) return !1
+    if (Mouse_In_Window2) return !0
 };
 
 function ci(a) {
@@ -6692,16 +6692,16 @@ function ci(a) {
 cv.ontouchstart = function(a) {
     ci(a);
     1 == Mouse_In_Window ? (Left_Click_Is_Down = !0, Mouse_Xpos = Mouse_Xpos2, Mouse_Ypos = Mouse_Ypos2) : 2 == Mouse_In_Window && (Left_Click_Is_Down = !1, Mouse_Xpos = Mouse_Xpos2, Mouse_Ypos = Mouse_Ypos2);
-    return !1
+    return !0
 };
 cv.ontouchmove = function(a) {
     ci(a);
-    return !1
+    return !0
 };
 cv.ontouchend = function(a) {
     ci(a);
     0 == Mouse_In_Window ? Left_Click_Is_Down = !1 : 1 == Mouse_In_Window ? (Mouse_Xpos = Mouse_Xpos2, Mouse_Ypos = Mouse_Ypos2) : 2 == Mouse_In_Window && (Mouse_Xpos = Mouse_Xpos2, Mouse_Ypos = Mouse_Ypos2);
-    return !1
+    return !0
 };
 cv.ontouchcancel = function() {
     Mouse_In_Window = 0;
@@ -6716,13 +6716,13 @@ doc.onkeydown = function(a) {
     var b = a.keyCode;
     65 <= b & 90 >= b ? a.shiftKey || (b += 32) : b = a.shiftKey ? Arr256_5[b] : Arr256_4[b];
     0 <= b && 256 > b && (Is_Key_Held[b] = !0, Arr256_2[b] = !0);
-    if (0 != b && Mouse_In_Window2) return !1
+    if (0 != b && Mouse_In_Window2) return !0
 };
 doc.onkeyup = function(a) {
     var b = a.keyCode;
     65 <= b & 90 >= b ? a.shiftKey || (b += 32) : b = a.shiftKey ? Arr256_5[b] : Arr256_4[b];
     0 <= b && 256 > b && (Is_Key_Held[b] = !1);
-    if (0 != b && Mouse_In_Window2) return !1
+    if (0 != b && Mouse_In_Window2) return !0
 };
 var Mouse_In_Window2 = !1,
     prompt_res = "",
