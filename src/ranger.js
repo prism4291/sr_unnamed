@@ -6675,7 +6675,7 @@ doc.onmouseup = function(a) {
     2 == a.button && (Right_Click_Is_Down = !1)
 };
 doc.oncontextmenu = function() {
-    if (Mouse_In_Window2) return !0
+    if (Mouse_In_Window2) return !1
 };
 
 function ci(a) {
@@ -6716,13 +6716,13 @@ doc.onkeydown = function(a) {
     var b = a.keyCode;
     65 <= b & 90 >= b ? a.shiftKey || (b += 32) : b = a.shiftKey ? Arr256_5[b] : Arr256_4[b];
     0 <= b && 256 > b && (Is_Key_Held[b] = !0, Arr256_2[b] = !0);
-    if (0 != b && Mouse_In_Window2) return !0
+    if (0 != b && Mouse_In_Window2) return !1
 };
 doc.onkeyup = function(a) {
     var b = a.keyCode;
     65 <= b & 90 >= b ? a.shiftKey || (b += 32) : b = a.shiftKey ? Arr256_5[b] : Arr256_4[b];
     0 <= b && 256 > b && (Is_Key_Held[b] = !1);
-    if (0 != b && Mouse_In_Window2) return !0
+    if (0 != b && Mouse_In_Window2) return !1
 };
 var Mouse_In_Window2 = !1,
     prompt_res = "",
