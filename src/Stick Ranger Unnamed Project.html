@@ -4,7 +4,7 @@
 	<head>
 
 		<title>Stick Ranger Modded</title>
-                
+
 		<style>
 
 			body {
@@ -26,7 +26,6 @@
 	<body background="data/main_bg.png" style="font-family:MS Gothic; font-size:9pt;">
 
 		<div style="width: 480px;">
-
 			<script type="text/javascript">
 				function hu_tag2(id, lg) {
 					var w = '', ck = '1';
@@ -50,18 +49,29 @@
 				}
 				hu_tag2('ranger', 1);
 			</script>
+			<INPUT TYPE="SUBMIT" VALUE="lock" ONCLICK="scroll_off();" />
+			<INPUT TYPE="SUBMIT" VALUE="kaijo" ONCLICK="scroll_on();" />
 		</div>
 
-		<!LINK HREF="style.css" REL="STYLESHEET">
-		<canvas id="cv" style="WIDTH:512px;HEIGHT:384px;"></canvas>
-		dodo
-		<script src="Stick Ranger Modded.js"></script>
-		<!script src="ranger.js"><!/!script>
-		<script type="text/javascript">
+		<canvas id="cv" width="512" height="384"></canvas>
 
+		<script src="Stick Ranger Modded.js"></script>
+
+		<script type="text/javascript">
+			function scroll_control(e) {
+				e.preventDefault();
+			}
+			function scroll_off() {
+				document.addEventListener('touchmove', scroll_control, { passive: false });
+				console.log('lock');
+			}
+			function scroll_on() {
+				document.removeEventListener('touchmove', scroll_control, { passive: false });
+                console.log('kaijo');
+			}
 			Init("1", 1, 0);
 		</script>
-
+		
 		<script type="text/javascript">
 			function save2() {
 				var s = "", h = "";
