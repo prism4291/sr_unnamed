@@ -6667,7 +6667,7 @@ doc.onmousemove = getMousePos;
 doc.onmousedown = function(a) {
     getMousePos(a);
     Mouse_In_Window2 = !1;
-    if (!(0 > Mouse_Xpos2 || 512 <= Mouse_Xpos2 || 0 > Mouse_Ypos2 || 384 <= Mouse_Ypos2) && (Mouse_In_Window2 = !0, 0 == a.button && (Left_Click_Is_Down = !0), 2 == a.button && (Right_Click_Is_Down = !0), Mouse_In_Window2)) return !1
+    if (!(0 > Mouse_Xpos2 || 512 <= Mouse_Xpos2 || 0 > Mouse_Ypos2 || 384 <= Mouse_Ypos2) && (Mouse_In_Window2 = !0, 0 == a.button && (Left_Click_Is_Down = !0), 2 == a.button && (Right_Click_Is_Down = !0), Mouse_In_Window2)) return !0
 };
 doc.onmouseup = function(a) {
     getMousePos(a);
