@@ -6692,7 +6692,7 @@ function ci(a) {
 cv.ontouchstart = function(a) {
     ci(a);
     1 == Mouse_In_Window ? (Left_Click_Is_Down = !0, Mouse_Xpos = Mouse_Xpos2, Mouse_Ypos = Mouse_Ypos2) : 2 == Mouse_In_Window && (Left_Click_Is_Down = !1, Mouse_Xpos = Mouse_Xpos2, Mouse_Ypos = Mouse_Ypos2);
-    return !1
+    return !0
 };
 cv.ontouchmove = function(a) {
     ci(a);
@@ -6701,7 +6701,7 @@ cv.ontouchmove = function(a) {
 cv.ontouchend = function(a) {
     ci(a);
     0 == Mouse_In_Window ? Left_Click_Is_Down = !1 : 1 == Mouse_In_Window ? (Mouse_Xpos = Mouse_Xpos2, Mouse_Ypos = Mouse_Ypos2) : 2 == Mouse_In_Window && (Mouse_Xpos = Mouse_Xpos2, Mouse_Ypos = Mouse_Ypos2);
-    return !1
+    return !0
 };
 cv.ontouchcancel = function() {
     Mouse_In_Window = 0;
