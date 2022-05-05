@@ -9862,7 +9862,8 @@ vh.onmousemove = ai;
 vh.onmousedown = function(a) {
 	ai(a);
 	bi = !1;
-	if (!(0 > Rh || ea <= Rh || 0 > Sh || fa <= Sh) && (bi = !0, 0 == a.button && (Nh = !0), 2 == a.button && (Qh = !0), bi)) return !1
+	if (!(0 > Rh || ea <= Rh || 0 > Sh || fa <= Sh) && (bi = !0, 0 == a.button && (Nh = !0), 2 == a.button && (Qh = !0), bi)) return !1;
+	return !1;
 };
 vh.onmouseup = function(a) {
 	ai(a);
